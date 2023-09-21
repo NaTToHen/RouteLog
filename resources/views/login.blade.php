@@ -17,13 +17,13 @@
         <div class="direita">
             <h1 class="titulo">LOGIN ADMIN</h1>
 
-            <form action="" method="post">
+            <form action="" method="get">
                 <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" id="senha">
 
-                <button type="submit">Efetuar login</button>
+                <button type="submit">EFETUAR LOGIN</button>
             </form>
         </div>
     </main>
