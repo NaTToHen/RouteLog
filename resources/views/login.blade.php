@@ -16,12 +16,20 @@
         </div>
         <div class="direita">
             <h1 class="titulo">LOGIN ADMIN</h1>
-
-            <form action="" method="get">
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario" id="usuario">
+            @if($msg = Session::get('erro'))
+                {{$msg}}
+            @endif
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    {{$error}} <br>
+                @endforeach
+            @endif
+            <form action="{{route('login.auth')}}" method="post">
+                @csrf
+                <label for="nome">Usuario</label>
+                <input type="text" name="nome" id="nome">
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="password" id="senha">
 
                 <button type="submit">EFETUAR LOGIN</button>
             </form>
