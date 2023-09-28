@@ -18,6 +18,5 @@ class LoginController extends Controller
         } else {
             return redirect()->back()->with('erro', 'Usuario ou senha invalidos');
         }
-
     }
 }

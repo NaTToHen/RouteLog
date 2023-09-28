@@ -17,12 +17,9 @@
         <div class="direita">
             <h1 class="titulo">LOGIN ADMIN</h1>
             @if($msg = Session::get('erro'))
-                {{$msg}}
-            @endif
-            @if($errors->any())
-                @foreach($errors->all() as $error)
-                    {{$error}} <br>
-                @endforeach
+                <div class="msgErro">
+                    <p>{{$msg}}</p>
+                </div>
             @endif
             <form action="{{route('login.auth')}}" method="post">
                 @csrf
