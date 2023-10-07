@@ -23,10 +23,21 @@
             @endif
             <form action="{{route('login.auth')}}" method="post">
                 @csrf
-                <label for="nome">Usuario</label>
-                <input type="text" name="nome" id="nome">
-                <label for="senha">Senha</label>
-                <input type="password" name="password" id="senha">
+                <div class="input">
+                    <label for="nome">Usuario</label>
+                    <input type="text" name="nome" id="nome">
+                    @error('nome')
+                        <span class="spanErro">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="input">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="password" id="senha">
+                    @error('password')
+                        <span class="spanErro">{{$message}}</span>
+                    @enderror
+                </div>
+
 
                 <button type="submit">EFETUAR LOGIN</button>
             </form>

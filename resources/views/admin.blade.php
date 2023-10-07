@@ -7,16 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
-    <title>RouteLog - Admin</title>
+    <title>RouteLog - {{$user = Auth::user()->nome}}</title>
 </head>
 <body>
     <header class="menuSuperior">
         <img src="/img/logo.svg" alt="logo" class="logoMenu">
         <div class="icones">
-            <img src="/img/pesquisa.svg">
-            <img src="/img/home.svg">
-            <img src="/img/Users/usuario.jpg" class="usuarioImg">
-            <img src="/img/configuracoes.svg" alt="">
+            <a href=""><img src="/img/pesquisa.svg"></a>
+            <a href="{{route('admin.index')}}"><img src="/img/home.svg"></a>
+            <a href="/usuario"><img src="/img/Users/usuario.jpg" class="usuarioImg"></a>
+            <a>
+                <img src="/img/configuracoes.svg" class="config">
+                    <a href="{{route('login.logout')}}" class="deslogar">sair</a>
+            </a>
         </div>
     </header>
 
@@ -34,5 +37,7 @@
     <main id="conteudo">
 
     </main>
+
+    <script src="/js/admin.js"></script>
 </body>
 </html>

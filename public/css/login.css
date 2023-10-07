@@ -42,7 +42,14 @@
 .direita form {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
     width: 40%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
@@ -61,7 +68,6 @@ label {
     border-radius: 10px;
     background: #EDEDED;
     border: 2px solid #525252;
-    margin-bottom: 30px;
 }
 
 button {
@@ -87,4 +93,9 @@ button {
     color: white;
     font-weight: bold;
     font-size: 22px;
+}
+
+.spanErro {
+    margin-top: 5px;
+    color: #ff3737;
 }
