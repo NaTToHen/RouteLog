@@ -30,12 +30,10 @@
         <img src="/img/relatorio.svg" alt="">
     </header>
 
-    <div class="tituloPagina">
-        <h1>Dashboard</h1>
-    </div>
+    @yield('titulo')
 
     <main id="conteudo">
-
+        @yield('conteudo')
     </main>
 
     <script src="/js/admin.js"></script>

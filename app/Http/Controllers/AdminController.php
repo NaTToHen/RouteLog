@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     public function index() {
         if (Auth::check()) {
-            return view('admin');
+            return view('adminPages.dashboard');
         } else {
             return redirect()->route('login');
         }
