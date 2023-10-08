@@ -14,4 +14,12 @@ class AdminController extends Controller
             return redirect()->route('login');
         }
     }
+
+    public function produtos() {
+        if (Auth::check()) {
+            return view('adminPages.produtos');
+        } else {
+            return redirect()->route('login');
+        }
+    }
 }

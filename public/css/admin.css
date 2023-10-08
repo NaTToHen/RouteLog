@@ -103,6 +103,128 @@
     transform: scale(1.2);
 }
 
-.menuLateral img:nth-child(1) {
+.menuLateral a:nth-child(1) {
     margin-top: 120px;
+}
+
+/* -------------------------- Usuário ------------------------ */
+
+#conteudoUser {
+    margin-left: 10%;
+    width: 100vh;
+    margin-top: 40px;
+}
+
+.infosUsuario {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.fotoUsuario {
+    border-radius: 10px;
+    width: 255px;
+    height: 255px;
+    object-fit: fill;
+}
+
+.textosUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.idUsuario {
+    color: #4a5568;
+}
+
+.numProdutosUsuario {
+    padding: 15px;
+    background: #D9D9D9;
+    font-size: 22px;
+    border-radius: 5px;
+    color: #4a5568;
+}
+
+.formUsuario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.formUsuario input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    background: #D9D9D9;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+/* -------------------------- Produtos ------------------------ */
+
+#conteudoProdutos {
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin-left: 5vw;
+}
+
+.btnPesquisa {
+    background: #F3F3F3;
+    font-weight: bold;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 2px solid #CFCFCF;
+    outline-color: #FFA800;
+    height: 40px;
+}
+
+.botoesProdutos {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btnCriar {
+    background: #E5E5E5;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0px 12px;
+    color: #FFA800;
+    font-size: 20px;
+    border-radius: 8px;
+    height: 40px;
+}
+
+/* --------- Tabelas --------- */
+
+.tabelaProdutos {
+    margin: auto;
+    margin-top: 100px;
+    padding: 0px 8px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.topoTabela {
+    background: #FFA800;
+    color: white;
+}
+
+.topoTabela th {
+    padding: 8px 0px;
+}
+
+.tabelaProdutos tr:nth-child(even) {
+    background-color: #E5E5E5;
 }

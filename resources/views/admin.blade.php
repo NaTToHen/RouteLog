@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
-    <title>RouteLog - {{$user = Auth::user()->nome}}</title>
+    <title>RouteLog - {{Auth::user()->nome}}</title>
 </head>
 <body>
     <header class="menuSuperior">
@@ -15,26 +15,24 @@
         <div class="icones">
             <a href=""><img src="/img/pesquisa.svg"></a>
             <a href="{{route('admin.index')}}"><img src="/img/home.svg"></a>
-            <a href="/usuario"><img src="/img/Users/usuario.jpg" class="usuarioImg"></a>
+            <a href="{{route('usuario.index')}}"><img src="{{Auth::user()->foto}}" class="usuarioImg"></a>
             <a>
                 <img src="/img/configuracoes.svg" class="config">
-                    <a href="{{route('login.logout')}}" class="deslogar">sair</a>
+                    <a href="{{route('login.logout')}}" class="deslogar">Sair</a>
             </a>
         </div>
     </header>
 
     <header class="menuLateral">
-        <img src="/img/home.svg" width="35px">
-        <img src="/img/caminhao.svg">
-        <img src="/img/caixa.svg" class="usuarioImg">
-        <img src="/img/relatorio.svg" alt="">
+        <a href="{{route('admin.index')}}"><img src="/img/home.svg" width="35px"></a>
+        <a href=""><img src="/img/caminhao.svg"></a>
+        <a href="{{route('admin.produtos')}}"><img src="/img/caixa.svg" class="usuarioImg"></a>
+        <a href=""><img src="/img/relatorio.svg" alt=""></a>
     </header>
 
     @yield('titulo')
 
-    <main id="conteudo">
-        @yield('conteudo')
-    </main>
+    @yield('conteudo')
 
     <script src="/js/admin.js"></script>
 </body>

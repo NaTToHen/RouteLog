@@ -10,6 +10,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
+            'foto' => '/img/henriquebonatto.svg',
             'nome' => 'admin',
             'email' => 'admin@hotmail.com',
             'password' => bcrypt('admin')
