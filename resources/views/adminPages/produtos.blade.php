@@ -14,6 +14,16 @@
 
 @section('conteudo')
 
+    @if($errors->any())
+        <div class="msgErro">
+            <p>Erro ao cadastrar produto.</p>
+        </div>
+    @endif
+    @if(session('success'))
+        <div class="msgSucesso">
+            <p>{{session('success')}}</p>
+        </div>
+    @endif
     <dialog class="modalAddProduto">
         <div class="conteudoModalAddProduto">
             <div class="topoModal">
@@ -22,8 +32,9 @@
             </div>
 
             <div class="formAddProduto">
-                <form action="/produtos/adicionar" method="post">
+                <form action="{{route('admin.addProdutos')}}" method="post">
                     @csrf
+                    <input type="hidden" name="fk_usuario" class="inputModal" value="{{$user->id}}">
                     <input placeholder="Nome" type="text" name="nome" class="inputModal">
                     <input placeholder="Descrição" type="text" name="descricao" class="inputModal">
                     <input placeholder="Fornecedora" type="text" name="fornecedora" class="inputModal">

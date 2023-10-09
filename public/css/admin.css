@@ -90,7 +90,7 @@
     top: 0;
     width: 60px;
     background: #FFA800;
-    height: 100vh;
+    min-height: 100vh;
     gap: 20px;
 }
 
@@ -172,7 +172,7 @@
     display: flex;
     flex-direction: column;
     width: 95vw;
-    margin-left: 5vw;
+    padding-left: 5vw;
 }
 
 .btnPesquisa {
@@ -212,7 +212,7 @@
 .tabelaProdutos {
     margin: auto;
     margin-top: 100px;
-    padding: 0px 8px;
+    margin-bottom: 60px;
     border-collapse: collapse;
     width: 90%;
 }
@@ -220,6 +220,9 @@
 .topoTabela {
     background: #FFA800;
     text-align: start;
+    border-top: 2px solid #EB9B00;
+    border-right: 2px solid #EB9B00;
+    border-left: 2px solid #EB9B00;
     color: white;
     height: 54px;
 }
@@ -332,4 +335,30 @@
     border-radius: 10px;
     padding: 0px 15px;
     height: 50px;
+}
+
+
+/*------- Toasts -------*/
+
+.msgSucesso {
+    display: flex;
+    background: green;
+    color: white;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.msgErro {
+    display: flex;
+    background: #ff3737;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+
+.msgSucesso p, .msgErro p {
+    font-size: 22px;
+    font-weight: bold;
 }
