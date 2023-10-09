@@ -48,17 +48,40 @@
                 </form>
             </div>
         </div>
-
-
     </dialog>
+
+    <dialog class="modalExcluir">
+        <div class="conteudoModalAddProduto">
+            <div class="topoModal">
+                <h1 class="tituloModal">ADICIONAR PRODUTO</h1>
+                <button class="btnSairModal"><img src="/img/iconeBtnSair.svg" alt="" width="30px"></button>
+            </div>
+
+            <div class="formAddProduto">
+                <form action="{{route('admin.excluiProdutos', $produto->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="hidden" name="id" class="inputModal" value="{{$produto->id}}">
+                    <p class="textoModalExcluir">Tem certeza que quer excluir o produto: {{$produto->nome}}?</p>
+                    <div class="botoesFormAddProduto">
+                        <button class="btnCancelarExcluir" type="button">Cancelar</button>
+                        <button class="btnExcluirModal" type="submit">Excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
 
     <main id="conteudoProdutos">
         <div class="botoesProdutos">
             <input type="text" class="btnPesquisa" placeholder="Pesquisar produto">
             <button class="btnCriar">Criar Produto</button>
         </div>
-        <table class="tabelaProdutos">
-            <thead>
+        <h1 class="numProdutos">{{$numProdutos}} produtos cadastrados</h1>
+        <div class="tabelaDiv">
+            <table class="tabelaProdutos">
+                <thead>
                 <tr class="topoTabela">
                     <td>ID</td>
                     <td>Nome</td>
@@ -70,8 +93,8 @@
                     <td class="icone">Excluir</td>
                     <td class="icone">Editar</td>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 @foreach($produtos as $produto)
                     <tr class="linhaTabela">
                         <td>{{$produto->id}}</td>
@@ -81,11 +104,12 @@
                         <td>{{$produto->quantidade}}</td>
                         <td>R$ {{$produto->valor}}</td>
 
-                        <td class="icone"><a href="/excluir/{{$produto->id}}"><img src="/img/iconeExcluir.svg" alt="" width="30px"></a></td>
+                        <td class="icone btnExcluirProduto"><a><img src="/img/iconeExcluir.svg" alt="" width="30px"></a></td>
                         <td class="icone"><a href="/editar/{{$produto->id}}"><img src="/img/iconeEditar.svg" alt="" width="30px"></a></td>
                     </tr>
                 @endforeach
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </main>
 @endsection

@@ -10,7 +10,8 @@ class AdminController extends Controller
 {
     public function index() {
         if (Auth::check()) {
-            return view('adminPages.dashboard');
+            $numProdutos = Produto::all()->count();
+            return view('adminPages.dashboard', compact('numProdutos'));
         } else {
             return redirect()->route('login');
         }
@@ -47,6 +48,11 @@ class AdminController extends Controller
         ]);
 
         return redirect()->route('admin.produtos')->with('success', 'Produto cadastrado com sucesso.');
+    }
+
+    public function excluiProduto($id) {
+        $produto = Produto::find($id);
+        return view('adminPages.produtos', compact('produto'));
     }
 }
 

@@ -84,6 +84,7 @@
 .menuLateral {
     border-right: 1px solid #E49700;
     display: flex;
+    z-index: 50;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -188,7 +189,7 @@
 
 .botoesProdutos {
     position: absolute;
-    right: 5%;
+    right: 0;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -207,22 +208,36 @@
     height: 40px;
 }
 
+.numProdutos {
+    font-size: 18px;
+    margin-left: 5%;
+    color: #cbcbcb;
+}
+
 /* --------- Tabelas --------- */
 
 .tabelaProdutos {
     margin: auto;
-    margin-top: 100px;
     margin-bottom: 60px;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
+}
+
+.tabelaDiv {
+    margin-top: 80px;
+    margin-left: 5%;
+    max-height: 530px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.tabelaProdutos tbody {
+    max-height: 300px;
 }
 
 .topoTabela {
     background: #FFA800;
     text-align: start;
-    border-top: 2px solid #EB9B00;
-    border-right: 2px solid #EB9B00;
-    border-left: 2px solid #EB9B00;
     color: white;
     height: 54px;
 }
@@ -332,6 +347,17 @@
     font-size: 22px;
     color: white;
     background: #FFA800;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 50px;
+}
+
+.btnExcluirModal {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background: #ff3737;
     border-radius: 10px;
     padding: 0px 15px;
     height: 50px;
