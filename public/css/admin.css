@@ -178,6 +178,7 @@
 .btnPesquisa {
     background: #F3F3F3;
     font-weight: bold;
+    font-size: 15px;
     padding-left: 8px;
     border-radius: 8px;
     border: 2px solid #CFCFCF;
@@ -218,13 +219,20 @@
 
 .topoTabela {
     background: #FFA800;
+    text-align: start;
     color: white;
 }
 
-.topoTabela th {
-    padding: 8px 0px;
+.topoTabela td {
+    font-weight: bold;
+    padding: 10px;
 }
 
 .tabelaProdutos tr:nth-child(even) {
     background-color: #E5E5E5;
+}
+
+.linhaTabela td {
+    color: #737373;
+    padding: 10px;
 }

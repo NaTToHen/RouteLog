@@ -19,7 +19,7 @@
             <div class="textosUsuario">
                 <h1 class="nomeUsuario">{{$user->nome}}</h1>
                 <h2 class="idUsuario">Id: {{$user->id}}</h2>
-                <div class="numProdutosUsuario">22 Produtos</div>
+                <div class="numProdutosUsuario">{{$numProdutos}} produtos</div>
             </div>
         </div>
         <div class="formUsuario">

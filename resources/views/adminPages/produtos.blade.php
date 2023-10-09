@@ -4,8 +4,6 @@
     use Illuminate\Support\Facades\Auth;
 
     $user = Auth::user();
-
-    $produto = Produto::All();
 @endphp
 
 @section('titulo')
@@ -21,18 +19,28 @@
             <button class="btnCriar">Criar Produto</button>
         </div>
         <table class="tabelaProdutos">
-            <tr class="topoTabela">
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Fornecedora</th>
-                <th>Quantidade</th>
-                <th>Valor</th>
-            </tr>
-
-            <tr>
-                <td>{{}}</td>
-            </tr>
+            <thead>
+                <tr class="topoTabela">
+                    <td>ID</td>
+                    <td>Nome</td>
+                    <td>Descrição</td>
+                    <td>Fornecedora</td>
+                    <td>Quantidade</td>
+                    <td>Valor</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($produtos as $produto)
+                    <tr class="linhaTabela">
+                        <td>{{$produto->id}}</td>
+                        <td>{{$produto->nome}}</td>
+                        <td>{{$produto->descricao}}</td>
+                        <td>{{$produto->fornecedora}}</td>
+                        <td>{{$produto->quantidade}}</td>
+                        <td>R$ {{$produto->valor}}</td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
     </main>
 @endsection
