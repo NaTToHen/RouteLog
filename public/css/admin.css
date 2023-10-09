@@ -221,6 +221,7 @@
     background: #FFA800;
     text-align: start;
     color: white;
+    height: 54px;
 }
 
 .topoTabela td {
@@ -235,4 +236,100 @@
 .linhaTabela td {
     color: #737373;
     padding: 10px;
+}
+
+.icone {
+    width: 50px;
+}
+
+
+/* --------- Modal --------- */
+
+.modalAddProduto {
+    border-radius: 10px;
+    border: 2px solid #FFA800;
+    padding: 20px;
+    margin: auto;
+    width: 70vw;
+    height: 80vh;
+}
+
+.conteudoModalAddProduto {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloModal {
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFA800;
+}
+
+.btnSairModal {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+    background: none;
+}
+
+.inputModal {
+    background: #F3F3F3;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 2px solid #CFCFCF;
+    outline-color: #FFA800;
+    height: 50px;
+    width: 55%;
+}
+
+.formAddProduto {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formAddProduto form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoesFormAddProduto {
+    margin-top: 20px;
+    justify-content: right;
+    width: 55%;
+    display: flex;
+    gap: 15px;
+}
+
+.cancelarFormAddProduto {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: #737373;
+    background: none;
+}
+
+.adicionarFormAddProduto {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background: #FFA800;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 50px;
 }
