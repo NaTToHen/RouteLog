@@ -15,4 +15,6 @@ Route::get('/usuario', [UsuarioController::class, 'index'])->name('usuario.index
 Route::get('/produtos', [AdminController::class, 'produtos'])->name('admin.produtos');
 
 Route::post('/produtos/adicionar', [AdminController::class, 'adicionarProduto'])->name('admin.addProdutos');
-Route::get('/produtos/{id}/excluir', [AdminController::class, 'excluiProduto'])->name('admin.excluiProdutos');
+
+Route::get('/produtos/{id}/delete', [AdminController::class, 'confirmaExcluirProduto'])->name('produto.confirmDelete');
+Route::delete('/produtos/{id}', [AdminController::class, 'excluir'])->name('produto.excluir');

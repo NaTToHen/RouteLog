@@ -50,9 +50,10 @@ class AdminController extends Controller
         return redirect()->route('admin.produtos')->with('success', 'Produto cadastrado com sucesso.');
     }
 
-    public function excluiProduto($id) {
-        $produto = Produto::find($id);
-        return view('adminPages.produtos', compact('produto'));
+    public function excluir($id) {
+        $produto = Produto::findOrFail($id);
+        $produto->delete();
+        return redirect()->route('admin.produtos')->with('success', 'Produto excluído com sucesso.');
     }
 }
 

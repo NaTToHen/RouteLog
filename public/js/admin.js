@@ -39,21 +39,24 @@ function addModal() {
 
 addModal()
 
-function excluirModal() {
-    const modalExcluir = document.querySelector('.modalExcluir')
-    const btnCancelarModalExcluir = document.querySelector('.ntbCancelarExcluir')
+function excluirModal(id) {
+    const modalExcluir = document.querySelector(`#modalDeletar-${id}`)
+    const btnCancelarModalExcluir = document.querySelector(`#modalFechar-${id}`)
+    const btnSairModal = document.querySelector(`.modalFechar-${id}`)
 
-    btnCriar.addEventListener('click', () => {
-        modalExcluir.showModal()
-        console.log('teste')
-    })
+    modalExcluir.showModal()
+    console.log('teste')
 
     btnCancelarModalExcluir.addEventListener('click', () => {
         modalExcluir.close()
+        console.log('teste')
+    })
+
+    btnSairModal.addEventListener('click', () => {
+        modalExcluir.close()
+        console.log('teste')
     })
 }
-
-excluirModal()
 
 // ------------------- Excluir Produto Modal
 
