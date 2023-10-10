@@ -25,7 +25,7 @@
         </div>
     @endif
 
-    @include('adminPages.produtos.adicionar')
+    @include('adminPages.entregas.adicionar')
 
     <main id="conteudoProdutos">
         <div class="botoesProdutos">

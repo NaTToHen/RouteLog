@@ -6,6 +6,7 @@ use App\Models\Entrega;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
 {
@@ -88,9 +89,13 @@ class AdminController extends Controller
     public function entregas() {
         if (Auth::check()) {
             $entregas = Entrega::all();
-            //$user = Auth::user();
-            //$numEntregas = Entrega::where('fk_usuario', $user->id)->count();
-            return view('adminPages.entregas', compact('entregas'));
+            $user = Auth::user();
+            $numEntregas = Entrega::where('fk_usuario', $user->id)->count();
+
+            $response = Http::get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/RS/municipios');
+            $cidades = $response->json();
+
+            return view('adminPages.entregas', compact('entregas', ['numEntregas', 'user', 'cidades']));
         } else {
             return redirect()->route('login');
         }
