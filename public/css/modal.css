@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*------------- Produtos ---------------*/
+
+/*----Excluir----*/
+.modalExcluir {
+    border-radius: 10px;
+    border: 2px solid #ff3737;
+    padding: 20px;
+    margin: auto;
+    width: 50vw;
+    height: 40vh;
+}
+
+.conteudoModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloModal {
+    font-weight: bold;
+    font-size: 22px;
+    color: #ff3737;
+}
+
+.formModal {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSairModal {
+    outline: none;
+}
+
+.btnExcluirModal {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background: #ff3737;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 50px;
+}
+
+.btnCancelarModalExcluir {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: #737373;
+    background: none;
+}
+
+/*----Editar----*/
+
+.modalEditarProduto {
+    border-radius: 10px;
+    border: 2px solid #FFA800;
+    padding: 20px;
+    margin: auto;
+    width: 70vw;
+    height: 80vh;
+}
+
+.conteudoModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.topoModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalEditarProduto .tituloModal {
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFA800;
+}
+
+.btnSairModal {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+    background: none;
+}
+
+.inputModal {
+    background: #F3F3F3;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 2px solid #CFCFCF;
+    outline-color: #FFA800;
+    height: 50px;
+    width: 55%;
+}
+
+.
+
+.formModal {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formModal form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoesForm {
+    margin-top: 20px;
+    justify-content: right;
+    width: 55%;
+    display: flex;
+    gap: 15px;
+}
+
+.cancelarFormEditaProduto {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: #737373;
+    background: none;
+}
+
+.textoModal {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.botoesForm {
+    margin-top: 80px;
+}
+
+.adicionarFormEditaProduto {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background: #FFA800;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 50px;
+}

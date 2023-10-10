@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+    <script src="/js/editarProduto.js"></script>
     <title>RouteLog - {{Auth::user()->nome}}</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
 
     <header class="menuLateral">
         <a href="{{route('admin.index')}}"><img src="/img/home.svg" width="35px"></a>
-        <a href=""><img src="/img/caminhao.svg"></a>
+        <a href="{{route('admin.entregas')}}"><img src="/img/caminhao.svg"></a>
         <a href="{{route('admin.produtos')}}"><img src="/img/caixa.svg" class="usuarioImg"></a>
         <a href=""><img src="/img/relatorio.svg" alt=""></a>
     </header>

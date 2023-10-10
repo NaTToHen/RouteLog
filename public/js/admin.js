@@ -25,7 +25,6 @@ const btnCancelarModal = document.querySelector('.cancelarFormAddProduto')
 function addModal() {
     btnCriar.addEventListener('click', () => {
         modalCriar.showModal()
-        console.log('teste')
     })
 
     btnSairModal.addEventListener('click', () => {
@@ -37,26 +36,18 @@ function addModal() {
     })
 }
 
-addModal()
-
 function excluirModal(id) {
     const modalExcluir = document.querySelector(`#modalDeletar-${id}`)
     const btnCancelarModalExcluir = document.querySelector(`#modalFechar-${id}`)
     const btnSairModal = document.querySelector(`.modalFechar-${id}`)
 
     modalExcluir.showModal()
-    console.log('teste')
 
     btnCancelarModalExcluir.addEventListener('click', () => {
         modalExcluir.close()
-        console.log('teste')
     })
 
     btnSairModal.addEventListener('click', () => {
         modalExcluir.close()
-        console.log('teste')
     })
 }
-
-// ------------------- Excluir Produto Modal
-
