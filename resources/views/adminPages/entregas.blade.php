@@ -41,19 +41,24 @@
                     <td>Destino</td>
                     <td>Motorista</td>
                     <td>Data Estimada</td>
+                    <td>Produto</td>
+                    <td>Quantidade</td>
                     <td>Valor</td>
                     <td>Status</td>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($entregas as $entrega)
-                    <tr class="linhaTabela">
+                    <tr class="linhaTabela entrega-{{$entrega->id}}">
                         <td>{{$entrega->id}}</td>
-                        <td>{{$entrega->nome}}</td>
-                        <td>{{$entrega->descricao}}</td>
-                        <td>{{$entrega->fornecedora}}</td>
-                        <td>{{$entrega->quantidade}}</td>
-                        <td>R$ {{$entrega->valor}}</td>
+                        <td>{{$entrega->nome_loja}}</td>
+                        <td>{{$entrega->cidadeDestino}}</td>
+                        <td>{{$entrega->nome_motorista}}</td>
+                        <td>{{$entrega->dataChegada}}</td>
+                        <td>{{$entrega->nome_produto}}</td>
+                        <td>{{$entrega->quantidadeProdutos}}</td>
+                        <td>R$ {{$entrega->valorTotal}}</td>
+                        <td>{{$entrega->statusEntrega}}</td>
                     </tr>
                 @endforeach
                 </tbody>

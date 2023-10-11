@@ -9,6 +9,7 @@ use App\Models\Produto;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
@@ -91,7 +92,7 @@ class AdminController extends Controller
 
     public function entregas() {
         if (Auth::check()) {
-            $entregas = Entrega::all();
+            $entregas = DB::table('viewEntregas')->get();
             $user = Auth::user();
             $motoristas = Motorista::all();
             $produtos = Produto::all();

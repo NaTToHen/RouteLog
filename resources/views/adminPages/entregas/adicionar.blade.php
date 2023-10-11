@@ -18,7 +18,7 @@
                 <select class="selectForm" name="cidadeDestino">
                     <option value="" disabled selected>Cidade de Destino</option>
                     @foreach ($cidades as $cidade)
-                        <option value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
+                        <option value="{{$cidade['nome']}}">{{$cidade['nome']}}</option>
                     @endforeach
                 </select>
                 <select class="selectForm" name="fk_motorista">
