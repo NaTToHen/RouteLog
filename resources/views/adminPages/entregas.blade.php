@@ -30,7 +30,7 @@
     <main id="conteudoProdutos">
         <div class="botoesProdutos">
             <form method="post" action=""><input type="text" class="btnPesquisa" placeholder="Pesquisar entrega por nome"></form>
-            <button class="btnCriar" onclick="addModal()">Registrar Entrega</button>
+            <button class="btnCriar" onclick="addModalEntrega()">Registrar Entrega</button>
         </div>
         <div class="tabelaDiv">
             <table class="tabelaProdutos">
@@ -67,4 +67,5 @@
             </table>
         </div>
     </main>
+    <script src="/js/entregas.js"></script>
 @endsection

@@ -16,16 +16,13 @@ config.addEventListener('click', () => {
 
 //------------------- Produtos ------------------
 
-const btnCriar = document.querySelector('.btnCriar')
 const modalCriar = document.querySelector('.modalAddProduto')
 
 const btnSairModal = document.querySelector('.btnSairModal')
 const btnCancelarModal = document.querySelector('.cancelarFormAddProduto')
 
 function addModal() {
-    btnCriar.addEventListener('click', () => {
-        modalCriar.showModal()
-    })
+    modalCriar.showModal()
 
     btnSairModal.addEventListener('click', () => {
         modalCriar.close()

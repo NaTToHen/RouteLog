@@ -10,15 +10,15 @@
                 @csrf
                 <input type="hidden" name="fk_usuario" class="inputModal" value="{{$user->id}}">
                 <select>
-                    <option value="">cidade de Inicio</option>
+                    <option value="" disabled>cidade de Inicio</option>
                     @foreach ($cidades as $cidade)
-                        <option name="cidadeInicio" value="{{$cidade->id}}">{{$cidade->nome}}</option>
+                        <option name="cidadeInicio" value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
                     @endforeach
                 </select>
                 <select>
-                    <option value="">cidade de Inicio</option>
+                    <option value="" disabled>cidade de Inicio</option>
                     @foreach ($cidades as $cidade)
-                        <option name="cidadeDestino" value="{{$cidade->id}}">{{$cidade->nome}}</option>
+                        <option name="cidadeDestino" value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
                     @endforeach
                 </select>
                 <input placeholder="Fornecedora" type="text" name="fornecedora" class="inputModal">
