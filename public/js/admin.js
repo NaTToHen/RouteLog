@@ -49,6 +49,34 @@ function excluirModal(id) {
     })
 }
 
+function mudaStatus() {
+    const statusEntrega = document.querySelectorAll('.statusEntrega')
+
+    statusEntrega.forEach((status) => {
+        if (status.textContent == 'Em andamento') {
+            status.classList.toggle('emAndamento')
+        } else if (status.textContent == 'Entregue') {
+            status.classList.toggle('entregue')
+        } else if(status.textContent == 'Cancelada') {
+            status.classList.toggle('cancelada')
+        }
+    })
+}
+
+function verificaValor() {
+    const valorEntrega = document.querySelectorAll('.valorEntrega')
+
+    valorEntrega.forEach((valor) => {
+        if (valor.textContent == 'R$ 0') {
+            valor.classList.toggle('semEstoque')
+        }
+    })
+}
+
+mudaStatus()
+verificaValor()
+
 setTimeout(function() {
     $('.toast').fadeOut('fast');
 }, 5000);
+

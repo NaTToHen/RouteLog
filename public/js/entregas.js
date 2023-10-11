@@ -1,6 +1,5 @@
 function addModalEntrega() {
     const modalCriar = document.querySelector('.modalAddEntrega')
-
     const btnSairModal = document.querySelector('.btnSairModal')
     const btnCancelarModal = document.querySelector('.cancelarFormAddEntrega')
 

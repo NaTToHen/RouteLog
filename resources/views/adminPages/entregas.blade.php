@@ -33,6 +33,7 @@
             <button class="btnCriar" onclick="addModalEntrega()">Registrar Entrega</button>
         </div>
         <div class="tabelaDiv">
+            <p class="avisoEstoque">*Se o valor total estiver em R$ 0 a quantidade é maior que em estoque.</p>
             <table class="tabelaProdutos">
                 <thead>
                 <tr class="topoTabela">
@@ -52,13 +53,13 @@
                     <tr class="linhaTabela entrega-{{$entrega->id}}">
                         <td>{{$entrega->id}}</td>
                         <td>{{$entrega->nome_loja}}</td>
-                        <td>{{$entrega->cidadeDestino}}</td>
+                        <td>{{$entrega->cidadeDestino}} - RS</td>
                         <td>{{$entrega->nome_motorista}}</td>
                         <td>{{$entrega->dataChegada}}</td>
                         <td>{{$entrega->nome_produto}}</td>
                         <td>{{$entrega->quantidadeProdutos}}</td>
-                        <td>R$ {{$entrega->valorTotal}}</td>
-                        <td>{{$entrega->statusEntrega}}</td>
+                        <td class="valorEntrega">R$ {{$entrega->valorTotal}}</td>
+                        <td class="statusEntrega">{{$entrega->statusEntrega}}</td>
                     </tr>
                 @endforeach
                 </tbody>

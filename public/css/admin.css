@@ -416,6 +416,30 @@
     color: #FFA800;
 }
 
+.avisoEstoque {
+    color: #ff7070;
+    float: right;
+}
+
+.emAndamento {
+    background: #FFDD9C;
+    color: black;
+}
+
+.cancelada {
+    background: #FF9C9C;
+    color: black;
+}
+
+.entregue {
+    background: #AAFF9C;
+    color: black;
+}
+
+.semEstoque {
+    background: #ff7070;
+}
+
 /*------- Toasts -------*/
 
 .msgSucesso {
