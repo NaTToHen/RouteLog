@@ -271,7 +271,7 @@
     padding: 20px;
     margin: auto;
     width: 70vw;
-    height: 80vh;
+    height: 700px;
 }
 
 .conteudoModal {
@@ -299,6 +299,18 @@
 }
 
 .inputModal {
+    background: #F3F3F3;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 8px;
+    border-radius: 8px;
+    border: 2px solid #CFCFCF;
+    outline-color: #FFA800;
+    height: 50px;
+    width: 55%;
+}
+
+.selectForm {
     background: #F3F3F3;
     font-weight: bold;
     font-size: 18px;
@@ -368,28 +380,83 @@
     height: 50px;
 }
 
+.btnConfirmar {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    background: #FFA800;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 50px;
+}
+
+.btnCancelar {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    color: #737373;
+    background: none;
+}
+
+/*------- Entregas -------*/
+
+.modalAddEntrega {
+    border-radius: 10px;
+    border: 2px solid #FFA800;
+    padding: 20px;
+    margin: auto;
+    width: 70vw;
+    height: 700px;
+}
+
+.modalAddEntrega .tituloModal {
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFA800;
+}
 
 /*------- Toasts -------*/
 
 .msgSucesso {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 400px;
+    border-radius: 8px;
     display: flex;
     background: green;
     color: white;
-    height: 45px;
+    height: 60px;
     align-items: center;
     justify-content: center;
 }
 
 .msgErro {
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 400px;
+    border-radius: 8px;
     display: flex;
     background: #ff3737;
     color: white;
+    height: 60px;
     align-items: center;
     justify-content: center;
-    height: 45px;
 }
 
 .msgSucesso p, .msgErro p {
     font-size: 22px;
     font-weight: bold;
+}
+
+.toast {
+    animation-name: example2;
+    animation-duration: 0.8s;
+}
+
+@keyframes example2 {
+    0%   {top: -10%;}
+    100%  {top:100px;}
 }

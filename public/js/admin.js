@@ -48,3 +48,7 @@ function excluirModal(id) {
         modalExcluir.close()
     })
 }
+
+setTimeout(function() {
+    $('.toast').fadeOut('fast');
+}, 5000);

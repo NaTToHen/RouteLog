@@ -9,25 +9,40 @@
             <form action="{{route('entregas.adicionar')}}" method="post">
                 @csrf
                 <input type="hidden" name="fk_usuario" class="inputModal" value="{{$user->id}}">
-                <select>
-                    <option value="" disabled>cidade de Inicio</option>
-                    @foreach ($cidades as $cidade)
-                        <option name="cidadeInicio" value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
+                <select class="selectForm" name="fk_loja">
+                    <option value="" disabled selected>Estoque</option>
+                    @foreach ($lojas as $loja)
+                        <option value="{{$loja->id}}">{{$loja->nome}}</option>
                     @endforeach
                 </select>
-                <select>
-                    <option value="" disabled>cidade de Inicio</option>
+                <select class="selectForm" name="cidadeDestino">
+                    <option value="" disabled selected>Cidade de Destino</option>
                     @foreach ($cidades as $cidade)
-                        <option name="cidadeDestino" value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
+                        <option value="{{$cidade['id']}}">{{$cidade['nome']}}</option>
                     @endforeach
                 </select>
-                <input placeholder="Fornecedora" type="text" name="fornecedora" class="inputModal">
-                <input placeholder="Quantidade" type="number" name="quantidade" class="inputModal quantidade">
-                <input placeholder="Valor" type="number" step="0.01" min="0" name="valor" class="inputModal">
+                <select class="selectForm" name="fk_motorista">
+                    <option value="" disabled selected>Motorista</option>
+                    @foreach ($motoristas as $motorista)
+                        <option value="{{$motorista->id}}">{{$motorista->nome}} / {{$motorista->caminhao}}</option>
+                    @endforeach
+                </select>
+                <input placeholder="Data estimada de entrega" type="date" name="dataChegada" class="inputModal">
+                <select class="selectForm" name="fk_produto" >
+                    <option value="" disabled selected>Produto</option>
+                    @foreach ($produtos as $produto)
+                        <option value="{{$produto->id}}">{{$produto->nome}} / R$ {{$produto->valor}}</option>
+                    @endforeach
+                </select>
+                <input placeholder="Quantidade" type="number" name="quantidadeProdutos" class="inputModal quantidade">
+                <select class="selectForm" name="statusEntrega">
+                    <option value="" disabled selected>Status</option>
+                        <option value="Em andamento">Em andamento</option>
+                </select>
 
                 <div class="botoesForm">
-                    <button class="cancelarFormAddEntrega" type="button">Cancelar</button>
-                    <button class="adicionarFormAddEntrega" type="submit">Registrar Entrega</button>
+                    <button class="cancelarFormAddEntrega btnCancelar" type="button">Cancelar</button>
+                    <button class="adicionarFormAddEntrega btnConfirmar" type="submit">Registrar Entrega</button>
                 </div>
             </form>
         </div>

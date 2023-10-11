@@ -15,12 +15,12 @@
 @section('conteudo')
 
     @if($errors->any())
-        <div class="msgErro">
+        <div class="msgErro toast">
             <p>Erro ao cadastrar entrega.</p>
         </div>
     @endif
     @if(session('success'))
-        <div class="msgSucesso">
+        <div class="msgSucesso toast">
             <p>{{session('success')}}</p>
         </div>
     @endif
@@ -54,18 +54,10 @@
                         <td>{{$entrega->fornecedora}}</td>
                         <td>{{$entrega->quantidade}}</td>
                         <td>R$ {{$entrega->valor}}</td>
-
-                        <td class="icone btnExcluirProduto"><a onclick="excluirModal({{$entrega->id}})"><img src="/img/iconeExcluir.svg" alt="" width="30px"></a></td>
-                        @include('adminPages.produtos.excluir')
-
-                        <td class="icone btnEditarProduto"><a onclick="editarModal({{$entrega->id}})"><img src="/img/iconeEditar.svg" alt="" width="30px"></a></td>
-                        @include('adminPages.produtos.editar')
-
                     </tr>
                 @endforeach
                 </tbody>
             </table>
         </div>
     </main>
-    <script src="/js/entregas.js"></script>
 @endsection

@@ -15,12 +15,12 @@
 @section('conteudo')
 
     @if($errors->any())
-        <div class="msgErro">
+        <div class="msgErro toast">
             <p>Erro ao cadastrar produto.</p>
         </div>
     @endif
     @if(session('success'))
-        <div class="msgSucesso">
+        <div class="msgSucesso toast">
             <p>{{session('success')}}</p>
         </div>
     @endif

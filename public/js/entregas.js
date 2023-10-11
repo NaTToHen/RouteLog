@@ -1,9 +1,9 @@
-const modalCriar = document.querySelector('.modalAddEntrega')
-
-const btnSairModal = document.querySelector('.btnSairModal')
-const btnCancelarModal = document.querySelector('.cancelarFormAddEntrega')
-
 function addModalEntrega() {
+    const modalCriar = document.querySelector('.modalAddEntrega')
+
+    const btnSairModal = document.querySelector('.btnSairModal')
+    const btnCancelarModal = document.querySelector('.cancelarFormAddEntrega')
+
     modalCriar.showModal()
 
     btnSairModal.addEventListener('click', () => {

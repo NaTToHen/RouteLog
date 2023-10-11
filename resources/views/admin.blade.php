@@ -34,7 +34,8 @@
     @yield('titulo')
 
     @yield('conteudo')
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/js/entregas.js"></script>
     <script src="/js/admin.js"></script>
 </body>
 </html>
