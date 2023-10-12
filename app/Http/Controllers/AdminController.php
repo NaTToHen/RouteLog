@@ -26,12 +26,20 @@ class AdminController extends Controller
 
     //------------------- Produtos ---------------------
 
-    public function produtos() {
+    public function produtos(Request $request) {
         if (Auth::check()) {
-            $produtos = Produto::all();
             $user = Auth::user();
             $numProdutos = Produto::where('fk_usuario', $user->id)->count();
-            return view('adminPages.produtos', compact('produtos', 'numProdutos'));
+
+            if ($request->input('pesquisado')) {
+                $pesquisado = $request->input('pesquisado');
+                $produtos = Produto::where('nome', 'like', "%$pesquisado%")->get();
+                return view('adminPages.produtos', compact('produtos', 'numProdutos'));
+            } else {
+                $produtos = Produto::all();
+                return view('adminPages.produtos', compact('produtos', 'numProdutos'));
+            }
+
         } else {
             return redirect()->route('login');
         }
@@ -90,19 +98,17 @@ class AdminController extends Controller
 
     //------------------- Entregas ---------------------
 
-    public function entregas() {
+    public function entregas(Request $request) {
         if (Auth::check()) {
-            $entregas = DB::table('viewEntregas')->get();
             $user = Auth::user();
             $motoristas = Motorista::all();
             $produtos = Produto::all();
-            $lojas = Loja::all();
-
             $numEntregas = Entrega::all()->count();
-
             $response = Http::get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/RS/municipios');
             $cidades = $response->json();
+            $lojas = Loja::all();
 
+            $entregas = DB::table('viewEntregas')->get();
             return view('adminPages.entregas', compact('entregas', ['numEntregas', 'user', 'cidades', 'motoristas', 'produtos', 'lojas']));
         } else {
             return redirect()->route('login');
@@ -132,10 +138,33 @@ class AdminController extends Controller
             'statusEntrega' => $request->input('statusEntrega')
         ]);
 
-
-
         return redirect()->route('admin.entregas')->with('success', 'Entrega registrada com sucesso.');
     }
 
+    public function editarEntrega(Request $request, $id) {
+        $request->validate([
+            'fk_loja' => ['required'],
+            'fk_usuario' => ['required'],
+            'cidadeDestino' => ['required'],
+            'fk_motorista' => ['required'],
+            'dataChegada' => ['required'],
+            'fk_produto' => ['required'],
+            'quantidadeProdutos' => ['required'],
+            'statusEntrega' => ['required']
+        ]);
+        $entrega = Entrega::find($id);
+        $entrega->update([
+            'fk_loja' => $request->input('fk_loja'),
+            'fk_usuario' => $request->input('fk_usuario'),
+            'cidadeDestino' => $request->input('cidadeDestino'),
+            'fk_motorista' => $request->input('fk_motorista'),
+            'dataChegada' => $request->input('dataChegada'),
+            'fk_produto' => $request->input('fk_produto'),
+            'quantidadeProdutos' => $request->input('quantidadeProdutos'),
+            'statusEntrega' => $request->input('statusEntrega')
+        ]);
+
+        return redirect()->route('admin.entregas')->with('success', 'Entrega editada com sucesso.');
+    }
 }
 

@@ -416,6 +416,14 @@
     height: 700px;
 }
 
+.tabelaEntrega .linhaTabela {
+    cursor: pointer;
+}
+
+.tabelaEntrega .linhaTabela:hover {
+    background: #c7c7c7;
+}
+
 .modalAddEntrega .tituloModal {
     font-weight: bold;
     font-size: 22px;

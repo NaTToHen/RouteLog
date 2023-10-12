@@ -29,7 +29,10 @@
 
     <main id="conteudoProdutos">
         <div class="botoesProdutos">
-            <input type="text" class="btnPesquisa" placeholder="Pesquisar produto por nome">
+            <form action="{{route('admin.produtos')}}" method="get">
+                @csrf
+                <input type="text" name="pesquisado" class="btnPesquisa" placeholder="Pesquisar produto por nome">
+            </form>
             <button class="btnCriar" onclick="addModal()">Criar Produto</button>
         </div>
         <h1 class="numProdutos">{{$numProdutos}} produtos cadastrados</h1>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
     <script src="/js/editarProduto.js"></script>
+    <script src="/js/editarEntrega.js"></script>
     <title>RouteLog - {{Auth::user()->nome}}</title>
 </head>
 <body>

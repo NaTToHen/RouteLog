@@ -49,6 +49,9 @@ function excluirModal(id) {
     })
 }
 
+
+// ------------------ Entregas ---------------------------------------------------
+
 function mudaStatus() {
     const statusEntrega = document.querySelectorAll('.statusEntrega')
 

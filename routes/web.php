@@ -24,3 +24,4 @@ Route::post('/produtos/{id}/editar', [AdminController::class, 'editarProduto'])-
 
 Route::get('/entregas', [AdminController::class, 'entregas'])->name('admin.entregas');
 Route::post('/entregas/adicionar', [AdminController::class, 'adicionarEntrega'])->name('entregas.adicionar');
+Route::post('/entregas/{id}/editar', [AdminController::class, 'editarEntrega'])->name('entregas.editar');

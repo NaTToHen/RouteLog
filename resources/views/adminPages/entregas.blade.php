@@ -29,10 +29,9 @@
 
     <main id="conteudoProdutos">
         <div class="botoesProdutos">
-            <form method="post" action=""><input type="text" class="btnPesquisa" placeholder="Pesquisar entrega por nome"></form>
             <button class="btnCriar" onclick="addModalEntrega()">Registrar Entrega</button>
         </div>
-        <div class="tabelaDiv">
+        <div class="tabelaDiv tabelaEntrega">
             <p class="numEntregas">{{$numEntregas}} entregas cadastradas</p>
             <p class="avisoEstoque">*Se o valor total estiver em R$ 0 a quantidade é maior que em estoque.</p>
             <table class="tabelaProdutos">
@@ -51,7 +50,8 @@
                 </thead>
                 <tbody>
                 @foreach($entregas as $entrega)
-                    <tr class="linhaTabela entrega-{{$entrega->id}}">
+                    @include('adminPages.entregas.editar')
+                    <tr class="linhaTabela" onclick="editarEntregaModal({{$entrega->id}})">
                         <td>{{$entrega->id}}</td>
                         <td>{{$entrega->nome_loja}}</td>
                         <td>{{$entrega->cidadeDestino}} - RS</td>
