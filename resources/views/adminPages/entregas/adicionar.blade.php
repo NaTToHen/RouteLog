@@ -24,14 +24,14 @@
                 <select class="selectForm" name="fk_motorista">
                     <option value="" disabled selected>Motorista</option>
                     @foreach ($motoristas as $motorista)
-                        <option value="{{$motorista->id}}">{{$motorista->nome}} / {{$motorista->caminhao}}</option>
+                        <option value="{{$motorista->id}}">{{$motorista->nome}} - {{$motorista->caminhao}}</option>
                     @endforeach
                 </select>
                 <input placeholder="Data estimada de entrega" type="date" name="dataChegada" class="inputModal">
                 <select class="selectForm" name="fk_produto" >
                     <option value="" disabled selected>Produto</option>
                     @foreach ($produtos as $produto)
-                        <option value="{{$produto->id}}">{{$produto->nome}} / R$ {{$produto->valor}}</option>
+                        <option value="{{$produto->id}}">{{$produto->nome}} - R$ {{$produto->valor}}</option>
                     @endforeach
                 </select>
                 <input placeholder="Quantidade" type="number" name="quantidadeProdutos" class="inputModal quantidade">

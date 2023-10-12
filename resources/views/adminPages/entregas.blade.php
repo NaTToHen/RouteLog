@@ -33,6 +33,7 @@
             <button class="btnCriar" onclick="addModalEntrega()">Registrar Entrega</button>
         </div>
         <div class="tabelaDiv">
+            <p class="numEntregas">{{$numEntregas}} entregas cadastradas</p>
             <p class="avisoEstoque">*Se o valor total estiver em R$ 0 a quantidade é maior que em estoque.</p>
             <table class="tabelaProdutos">
                 <thead>

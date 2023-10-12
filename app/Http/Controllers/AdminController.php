@@ -98,7 +98,7 @@ class AdminController extends Controller
             $produtos = Produto::all();
             $lojas = Loja::all();
 
-            $numEntregas = Entrega::where('fk_usuario', $user->id)->count();
+            $numEntregas = Entrega::all()->count();
 
             $response = Http::get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/RS/municipios');
             $cidades = $response->json();

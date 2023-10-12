@@ -169,7 +169,7 @@
 
 #conteudoProdutos {
     position: relative;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 95vw;
@@ -215,19 +215,25 @@
     color: #cbcbcb;
 }
 
+.numEntregas {
+    color: #737373;
+    font-size: 20px;
+    padding-bottom: 8px;
+    float: left;
+}
+
 /* --------- Tabelas --------- */
 
 .tabelaProdutos {
     margin: auto;
-    margin-bottom: 60px;
     border-collapse: collapse;
     width: 100%;
 }
 
 .tabelaDiv {
-    margin-top: 80px;
     margin-left: 5%;
-    max-height: 530px;
+    margin-top: 60px;
+    max-height: 400px;
     overflow-y: auto;
     overflow-x: auto;
 }
