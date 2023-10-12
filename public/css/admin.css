@@ -454,6 +454,12 @@
     background: #ff7070;
 }
 
+.modalEditarEntrgea .formModal {
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 10px;
+}
+
 /*------- Toasts -------*/
 
 .msgSucesso {

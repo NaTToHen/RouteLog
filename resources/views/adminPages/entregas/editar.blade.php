@@ -1,4 +1,4 @@
-<dialog class="modalAddEntrega" id="modalEditarEntrega-{{$entrega->id}}">
+<dialog class="modalAddEntrega modalEditarEntrgea" id="modalEditarEntrega-{{$entrega->id}}">
     <div class="conteudoModal">
         <div class="topoModal">
             <h1 class="tituloModal">EDITAR ENTREGA</h1>
@@ -16,7 +16,7 @@
                     @endforeach
                 </select>
                 <select class="selectForm" name="cidadeDestino">
-                    <option value="" disabled selected>Cidade de Destino</option>
+                    <option value="" selected>Cidade de Destino</option>
                     @foreach ($cidades as $cidade)
                         <option value="{{$cidade['nome']}}">{{$cidade['nome']}}</option>
                     @endforeach
