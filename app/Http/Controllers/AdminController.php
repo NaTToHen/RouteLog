@@ -23,9 +23,7 @@ class AdminController extends Controller
         }
     }
 
-
     //------------------- Produtos ---------------------
-
     public function produtos(Request $request) {
         if (Auth::check()) {
             $user = Auth::user();

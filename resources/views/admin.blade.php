@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/relatorio.css">
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
     <script src="/js/editarProduto.js"></script>
     <script src="/js/editarEntrega.js"></script>
@@ -29,7 +30,7 @@
         <a href="{{route('admin.index')}}"><img src="/img/home.svg" width="35px"></a>
         <a href="{{route('admin.entregas')}}"><img src="/img/caminhao.svg"></a>
         <a href="{{route('admin.produtos')}}"><img src="/img/caixa.svg" class="usuarioImg"></a>
-        <a href=""><img src="/img/relatorio.svg" alt=""></a>
+        <a href="{{route('relatorio.index')}}"><img src="/img/relatorio.svg" alt=""></a>
     </header>
 
     @yield('titulo')
